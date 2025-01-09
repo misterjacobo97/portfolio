@@ -16,15 +16,15 @@ const  { title, subtitle } = Astro.props;
   <div id="header-main" class="flex flex-row space-x-4 h-full">
     <Image src={profilePic} alt="profile pic" class="h-60 w-fit rounded-full" />
     <div id="header-text" class="flex flex-col space-y-4">
-      <a href="/"><H1 text={title}/></a>
+      <a href="/portfolio"><H1 text={title}/></a>
       <p class="text-2xl text-justify">{subtitle}</p>
     </div>
 
   </div>
     
   <div class="flex flex-row w-full justify-evenly">
-    <Button title="About" linkTo="/about"/>
-    <Button title="Skills" linkTo="/skills"/>
-    <Button title="Projects" linkTo="/projects"/>
+    <Button title="About" linkTo="/portfolio/about"/>
+    <Button title="Skills" linkTo="/portfolio/skills"/>
+    <Button title="Projects" linkTo="/portfolio/projects"/>
   </div>
 </nav>
