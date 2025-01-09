@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProgressBar from '../components/ProgressBar.astro';
+import CSharpIcon from '../icons/Tech/Languages/Csharp.astro';
+import HtmlIcon from '../icons/Tech/Languages/Html.astro';
+import JsIcon from '../icons/Tech/Languages/Js.astro';
+import GitIcon from '../icons/Tech/Tools/Git.astro';
+
+
+import H2 from '../components/text/H2.astro';
+
+---
+
+<Layout title="Jacobo Duque's Portfolio - Fullstack Game Developer" description='Page showcasing my projects and skills as a fullstack game developer.'>
+	<main class="mx-40 space-y-6 xl:mx-96" slot="content">
+
+		<H2 text="Languages"/>
+		<ProgressBar height={30} title='C#' progress={80}><CSharpIcon height={30} width={30} slot='icon' /></ProgressBar>
+		<ProgressBar height={30} title='js' progress={60}><JsIcon height={30} width={30} slot='icon' /></ProgressBar>
+		<ProgressBar height={30} title='html' progress={60}><HtmlIcon height={30} width={30} slot='icon' /></ProgressBar> 
+	
+		
+		<H2 text="Tools"/>
+		<ProgressBar height={30} title='html' progress={80}><GitIcon height={30} width={30} slot='icon' /></ProgressBar>
+
+		<ProgressBar height={30} title='html' progress={80}><GitIcon height={30} width={30} slot='icon' /></ProgressBar> 
+	</main>
+	
+</Layout>

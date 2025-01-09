@@ -1,0 +1,8 @@
+---
+interface props {
+  text: string
+}
+
+const {...props} = Astro.props;
+---
+<h2 class="text-2xl">{props.text}</h2>

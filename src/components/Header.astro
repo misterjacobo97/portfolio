@@ -1,0 +1,30 @@
+---
+
+import { Image } from "astro:assets";
+import Button from "./Button.astro";
+import H1 from "./text/H1.astro";
+import profilePic from "../assets/profile_pic.jpg"; 
+
+interface Props {
+  title: string
+  subtitle: string
+}
+
+const  { title, subtitle } = Astro.props;
+---
+<nav class=" flex flex-col h-80 mx-44 my-10 space-y-2 items-center justify-evenly">
+  <div id="header-main" class="flex flex-row space-x-4 h-full">
+    <Image src={profilePic} alt="profile pic" class="h-60 w-fit rounded-full" />
+    <div id="header-text" class="flex flex-col space-y-4">
+      <a href="/"><H1 text={title}/></a>
+      <p class="text-2xl text-justify">{subtitle}</p>
+    </div>
+
+  </div>
+    
+  <div class="flex flex-row w-full justify-evenly">
+    <Button title="About" linkTo="/about"/>
+    <Button title="Skills" linkTo="/skills"/>
+    <Button title="Projects" linkTo="/projects"/>
+  </div>
+</nav>

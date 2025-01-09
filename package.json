@@ -1,0 +1,22 @@
+{
+  "name": "curso-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.8.2",
+    "@astrojs/solid-js": "^5.0.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/source-code-pro": "^5.0.19",
+    "astro": "^4.12.2",
+    "solid-js": "^1.9.4",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5.5.3"
+  }
+}

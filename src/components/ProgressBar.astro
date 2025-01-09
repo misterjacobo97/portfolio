@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string
+  progress: number
+  height: number
+}
+
+const {...props} = Astro.props;
+---
+
+
+<div id={props.title} class="w-[100%] h-full flex flex-row space-x-4">
+    <span class=`w-${props.height} h-${props.height}` id="icon-slot">
+      <slot name="icon"/>
+    </span>
+
+  <span
+    role="progressbar"
+    aria-labelledby="ProgressLabel"
+    aria-valuenow={props.progress.toString()}
+    class="relative block w-full rounded-full bg-gray-200 dark:bg-gray-700"
+  >
+    <span class="block h-full w-full rounded-full bg-green-500 text-center text-[10px]/4"  style=`width: ${props.progress}%`>
+      <span class="flex font-bold h-full w-full justify-end items-center pr-4 text-lg text-white"> {props.progress.toString()} </span>
+    </span>
+  </span>
+</div>
+
+
+
+
