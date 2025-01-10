@@ -4,13 +4,10 @@ interface Props {
   linkTo: string
 }
 
-const hoverStyle = "bg-green-400 text-white";
-const normalStyle = "bg-green-600 text-white";
-
 const {title, linkTo} = Astro.props;
 ---
 
 <a class="w-min h-min" href={linkTo}>
-  <button  class={`flex rounded-xl justify-center w-min px-4 py-2 ${normalStyle} hover:${hoverStyle}`}>{title}</button>
+  <button class="flex rounded-xl justify-center w-min px-4 py-2 bg-[#556547] hover:bg-[#343830]">{title}</button>
 </a>
 

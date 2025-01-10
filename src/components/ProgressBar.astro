@@ -18,10 +18,14 @@ const {...props} = Astro.props;
     role="progressbar"
     aria-labelledby="ProgressLabel"
     aria-valuenow={props.progress.toString()}
-    class="relative block w-full rounded-full bg-gray-200 dark:bg-gray-700"
+    class="relative block w-full rounded-full bg-[#4C5345] dark:bg-[#343830]"
   >
-    <span class="block h-full w-full rounded-full bg-green-500 text-center text-[10px]/4"  style=`width: ${props.progress}%`>
-      <span class="flex font-bold h-full w-full justify-end items-center pr-4 text-lg text-white"> {props.progress.toString()} </span>
+    <span class="block h-full w-full rounded-full bg-[#556547] text-center text-[10px]/4"  style=`width: ${props.progress}%`>
+      <span class="flex flex-row font-bold h-full w-full justify-between items-center px-4 text-lg text-white
+        "> 
+        <p>{props.title}</p>
+        <p>{props.progress.toString()}</p> 
+      </span>
     </span>
   </span>
 </div>
