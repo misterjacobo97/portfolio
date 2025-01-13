@@ -5,24 +5,44 @@ import CSharpIcon from '../icons/Tech/Languages/Csharp.astro';
 import HtmlIcon from '../icons/Tech/Languages/Html.astro';
 import JsIcon from '../icons/Tech/Languages/Js.astro';
 import GitIcon from '../icons/Tech/Tools/Git.astro';
-
+import TypescriptIcon from '../icons/Tech/Languages/Typescript.astro';
+import GdScriptIcon from '../icons/Tech/Languages/GdScript.astro';
+import AstroIcon from '../icons/Tech/Frameworks/Ast.astro';
+import NeovimIcon from '../icons/Tech/Tools/Neovim.astro';
+import NotionIcon from '../icons/Tech/Tools/Notion.astro';
+import UnityIcon from '../icons/Tech/Tools/Unity.astro';
+import SolidJsIcon from '../icons/Tech/Frameworks/SolidJs.astro';
+import BlenderIcon from '../icons/Tech/Tools/Blender.astro';
 
 import H2 from '../components/text/H2.astro';
-
 ---
 
 <Layout title="Jacobo Duque's Portfolio - Fullstack Game Developer" description='Page showcasing my projects and skills as a fullstack game developer.'>
-	<main class="mx-40 space-y-6 xl:mx-96" slot="content">
-
-		<H2 text="Languages"/>
-		<ProgressBar height={30} title='C#' progress={80}><CSharpIcon height={30} width={30} slot='icon' /></ProgressBar>
-		<ProgressBar height={30} title='js' progress={60}><JsIcon height={30} width={30} slot='icon' /></ProgressBar>
-		<ProgressBar height={30} title='html' progress={60}><HtmlIcon height={30} width={30} slot='icon' /></ProgressBar> 
+	<main class="flex flex-col gap-y-6 mb-20 sm:mx-20 2xl:mx-40 xl:flex-row xl:flex-wrap " slot="content">
+		<div id="languages" class="flex flex-col justify-between space-y-6 basis-1/2 px-4">
+			<H2 text="Languages"/>
+			<ProgressBar height={30} title='C#' progress={85}><CSharpIcon height={30} width={30} slot='icon' /></ProgressBar>
+			<ProgressBar height={30} title='GDScript' progress={85}><GdScriptIcon height={30} width={30} slot='icon' /></ProgressBar>
+			<ProgressBar height={30} title='Ts' progress={80}><TypescriptIcon height={30} width={30} slot='icon' /></ProgressBar>
+			<ProgressBar height={30} title='Js' progress={60}><JsIcon height={30} width={30} slot='icon' /></ProgressBar> 
+			<ProgressBar height={30} title='HTML' progress={60}><HtmlIcon height={30} width={30} slot='icon' /></ProgressBar> 
+		</div>
 	
-		
-		<H2 text="Tools"/>
-		<ProgressBar height={30} title='html' progress={80}><GitIcon height={30} width={30} slot='icon' /></ProgressBar>
-		<ProgressBar height={30} title='html' progress={80}><GitIcon height={30} width={30} slot='icon' /></ProgressBar> 
+		<div id="Tool" class="flex flex-col space-y-6 basis-1/2 px-4 h-full justify-start">
+			<H2 text="Tools"/>
+			<ProgressBar height={30} title='Unity' progress={85}><UnityIcon height={30} width={30} slot='icon' /></ProgressBar> 
+			<ProgressBar height={30} title='Godot' progress={85}><GdScriptIcon height={30} width={30} slot='icon' /></ProgressBar> 
+			<ProgressBar height={30} title='Git' progress={80}><GitIcon height={30} width={30} slot='icon' /></ProgressBar>
+			<ProgressBar height={30} title='Neovim' progress={75}><NeovimIcon height={30} width={30} slot='icon' /></ProgressBar> 
+			<ProgressBar height={30} title='Notion' progress={65}><NotionIcon height={30} width={30} slot='icon' /></ProgressBar> 
+			<ProgressBar height={30} title='Blender' progress={55}><BlenderIcon height={30} width={30} slot='icon' /></ProgressBar> 
+		</div>
+
+		<div id="Frameworks" class="flex flex-col space-y-6 basis-1/2 px-4">
+			<H2 text="Frameworks"/>
+			<ProgressBar height={30} title='Solid Js' progress={80}><SolidJsIcon height={30} width={30} slot='icon' /></ProgressBar> 
+			<ProgressBar height={30} title='Astro' progress={75}><AstroIcon height={30} width={30} slot='icon' /></ProgressBar> 
+		</div>
 	</main>
 	
 </Layout>
