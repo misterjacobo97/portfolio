@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1{
+    @apply font-bold text-3xl no-underline;
+  }
+  
+  h2 {
+  @apply text-xl;
+  }
+
+  p a {
+    @apply underline;
+  }
+
+
+}

@@ -19,16 +19,19 @@ import H2 from '../components/text/H2.astro';
 
 <Layout title="Jacobo Duque's Portfolio - Fullstack Game Developer" description='Page showcasing my projects and skills as a fullstack game developer.'>
 	<main class="flex flex-col gap-y-6 mb-20 sm:mx-20 2xl:mx-40 xl:flex-row xl:flex-wrap " slot="content">
-		<div id="languages" class="flex flex-col justify-between space-y-6 basis-1/2 px-4">
+		<p>
+			Here I rank the languages and tools I use and love the most! Not necesserally a measure of expertice, but by how much confidence I have when using them. 
+		</p>
+		<div id="languages" class="flex flex-col justify-between space-y-6 basis-1/2 px-4 h-auto">
 			<H2 text="Languages"/>
 			<ProgressBar height={30} title='C#' progress={85}><CSharpIcon height={30} width={30} slot='icon' /></ProgressBar>
-			<ProgressBar height={30} title='GDScript' progress={85}><GdScriptIcon height={30} width={30} slot='icon' /></ProgressBar>
+			<ProgressBar height={30} title='GDScript' progress={80}><GdScriptIcon height={30} width={30} slot='icon' /></ProgressBar>
 			<ProgressBar height={30} title='Ts' progress={80}><TypescriptIcon height={30} width={30} slot='icon' /></ProgressBar>
 			<ProgressBar height={30} title='Js' progress={60}><JsIcon height={30} width={30} slot='icon' /></ProgressBar> 
 			<ProgressBar height={30} title='HTML' progress={60}><HtmlIcon height={30} width={30} slot='icon' /></ProgressBar> 
 		</div>
 	
-		<div id="Tool" class="flex flex-col space-y-6 basis-1/2 px-4 h-full justify-start">
+		<div id="Tool" class="flex flex-col space-y-6 basis-1/2 px-4 justify-between h-auto">
 			<H2 text="Tools"/>
 			<ProgressBar height={30} title='Unity' progress={85}><UnityIcon height={30} width={30} slot='icon' /></ProgressBar> 
 			<ProgressBar height={30} title='Godot' progress={85}><GdScriptIcon height={30} width={30} slot='icon' /></ProgressBar> 
@@ -38,7 +41,7 @@ import H2 from '../components/text/H2.astro';
 			<ProgressBar height={30} title='Blender' progress={55}><BlenderIcon height={30} width={30} slot='icon' /></ProgressBar> 
 		</div>
 
-		<div id="Frameworks" class="flex flex-col space-y-6 basis-1/2 px-4">
+		<div id="Frameworks" class="flex flex-col justify-between space-y-6 basis-1/2 px-4">
 			<H2 text="Frameworks"/>
 			<ProgressBar height={30} title='Solid Js' progress={80}><SolidJsIcon height={30} width={30} slot='icon' /></ProgressBar> 
 			<ProgressBar height={30} title='Astro' progress={75}><AstroIcon height={30} width={30} slot='icon' /></ProgressBar> 

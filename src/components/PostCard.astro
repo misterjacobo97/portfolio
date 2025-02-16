@@ -1,0 +1,14 @@
+---
+interface Props {
+  title: string, 
+  description: string,
+  className: string,
+  postUrl: string
+}
+
+const  { ...props } = Astro.props;
+---
+<a href=`projects/${props.postUrl}` class=`flex flex-col text-center justify-between rounded-3xl border-white border-2 p-2 gap-2 items-center ${props.className}`>
+  <h1>{props.title}</h1>
+  <p>{props.description}</p>
+</a>

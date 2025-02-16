@@ -1,10 +1,21 @@
 ---
-import { defineCollection, z} from 'astro:content';
+import { render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import PostCard from "../../components/PostCard.astro";
+
+const projects = await getCollection("projects");
 ---
 
 <Layout title="Jacobo Duque's Portfolio - Fullstack Game Developer" description='Page showcasing my projects and skills as a fullstack game developer.'>
-	<main class="px-4">
-        
+	<main class="flex flex-wrap h-full w-full gap-4 justify-center" slot="content">
+	 
+		{projects.map( async posts => {
+			const {Content} = await render(posts);
+
+			return (
+			<PostCard className='basis-1/4 h-auto' title={posts.data.title} description={posts.data.description} postUrl={posts.id} ><Content/></PostCard>);
+		}
+		)}
 	</main>
 </Layout>
